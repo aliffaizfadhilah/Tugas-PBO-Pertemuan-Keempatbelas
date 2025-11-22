@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7a7e1a22-1ce8-431a-83ef-379f5c1e67cf">
+	<property name="ireport.zoom" value="1.331000000000001"/>
+	<property name="ireport.x" value="52"/>
+	<property name="ireport.y" value="27"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM petville ORDER BY id_hewan]]>
+	</queryString>
+	<field name="id_hewan" class="java.lang.String"/>
+	<field name="nama_hewan" class="java.lang.String"/>
+	<field name="jenis_hewan" class="java.lang.String"/>
+	<field name="harga" class="java.lang.Integer"/>
+	<field name="id_pemilik" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="178" splitType="Stretch">
+			<staticText>
+				<reportElement x="221" y="0" width="300" height="68" uuid="051e9f19-88c9-485c-beb5-545a14676559"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black" size="54" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PETVILLE ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="13" y="16" width="164" height="162" uuid="8d463125-fb1d-4816-a52f-64d024942171"/>
+				<imageExpression><![CDATA["D:\\Pet Ville Logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="255" y="78" width="199" height="48" uuid="f9fe4a62-fa25-432b-88bf-9717b4c99946"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Nitirejo, Keboan Anom, Gedangan, Sidoarjo]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="434" y="145" width="100" height="20" uuid="172e9ef2-b4e8-4a78-8aee-803f2b9bfba1"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="163" y="0" width="226" height="24" uuid="a9643e90-4725-43b9-8470-d581ced13ed7"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA HEWAN]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="34" y="41" width="100" height="20" uuid="b605cd28-0ae4-4a5b-b6dd-86754d56eefa"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="34" y="41" width="100" height="20" uuid="debc8250-07c3-4a56-98af-88fd346e2603"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID HEWAN]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="134" y="41" width="100" height="20" uuid="a4ac641c-cf4e-4fe3-82af-23e90a7d6ea9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="334" y="41" width="100" height="20" uuid="e04737e3-1ae1-4a92-a90b-6659bc84d087"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="134" y="41" width="100" height="20" uuid="d37379ad-1553-4a5f-9d8c-6fdbbf7b4121"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA HEWAN]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="234" y="41" width="100" height="20" uuid="8550ce1b-efcf-4313-9059-8fc3185a3e8c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="234" y="41" width="100" height="20" uuid="fd44622b-69f0-4ef6-91cf-02d75a7976cd"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[JENIS HEWAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="41" width="100" height="20" uuid="6d791824-3101-4359-93ec-f56fae6e1275"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="434" y="41" width="100" height="20" uuid="55c215a3-ec32-40ed-8212-b711375d7d86"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="434" y="41" width="100" height="20" uuid="b7855725-dc3b-4314-903e-24da8a2a24c8"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID PEMILIK]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<rectangle>
+				<reportElement x="334" y="0" width="100" height="20" uuid="c466da29-dbf3-4ed7-9b41-d4c7b181f10a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="434" y="0" width="100" height="20" uuid="d5f0612d-13bb-4d11-8918-cad1912cdd24"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="234" y="0" width="100" height="20" uuid="fb31acf1-a3ee-4f32-8a75-1d57430488c4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="134" y="0" width="100" height="20" uuid="9da77fd2-f77e-472e-96f1-96ce0b18f2fa"/>
+			</rectangle>
+			<textField>
+				<reportElement x="234" y="0" width="100" height="20" uuid="ae1434ec-178d-4bb6-9b2c-ef83dae92221"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{jenis_hewan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="334" y="0" width="100" height="20" uuid="1072c25b-4ec5-4ffa-84ff-531ab82392b2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="0" width="100" height="20" uuid="64e023a5-62d6-4a4e-a11d-fce09c482a2b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{id_pemilik}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="34" y="0" width="100" height="20" uuid="05207925-a77b-45ef-bd11-b804d04722ca"/>
+			</rectangle>
+			<textField>
+				<reportElement x="34" y="0" width="100" height="20" uuid="6264f315-615b-4c36-a169-4944e5b08e7a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{id_hewan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="0" width="100" height="20" uuid="4b2a374a-1c7b-4f61-9b3a-e929cd6de56c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nama_hewan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

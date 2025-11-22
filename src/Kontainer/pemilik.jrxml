@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="da6e37e2-c271-44de-9aa4-f291bbdeb3eb">
+	<property name="ireport.zoom" value="1.1000000000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM pemilik ORDER BY id_pemilik]]>
+	</queryString>
+	<field name="id_pemilik" class="java.lang.String"/>
+	<field name="nama_pemilik" class="java.lang.String"/>
+	<field name="alamat" class="java.lang.String"/>
+	<field name="no_telepon" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="199" splitType="Stretch">
+			<image>
+				<reportElement x="27" y="12" width="164" height="162" uuid="1239eced-af85-4fa1-981e-f77e033cb7e6"/>
+				<imageExpression><![CDATA["D:\\Pet Ville Logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="231" y="10" width="300" height="68" uuid="4c273e2b-431e-42a4-904f-67f8542e177c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black" size="54" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PETVILLE ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="88" width="199" height="48" uuid="35b15f70-a907-40d4-9847-b179d0e2873b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Nitirejo, Keboan Anom, Gedangan, Sidoarjo]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="444" y="155" width="100" height="20" uuid="68910423-b882-4142-b29b-14c0c3d78f56"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="173" y="0" width="226" height="24" uuid="cad996fb-9560-436d-83e9-e3ff3d287e17"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA HEWAN]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="54" splitType="Stretch">
+			<rectangle>
+				<reportElement x="73" y="34" width="100" height="20" uuid="66da1b9e-49a0-4771-aef0-d4ad25a79e79"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="173" y="34" width="100" height="20" uuid="bf4ef5cb-ea5e-45e2-b6a5-934cd2bdac3f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="273" y="34" width="100" height="20" uuid="d291bc13-a0c0-4a2c-bab7-42e3f8ae6103"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="373" y="34" width="100" height="20" uuid="0c8b7f1d-63b1-4ddc-8b46-abe6dcb1c97f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="73" y="34" width="100" height="20" uuid="c778d4a4-164e-4176-b129-b6eaf1e3f9f8"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID PEMILIK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="173" y="34" width="100" height="20" uuid="92ad8b05-e8f5-43fb-a488-0545c207a50a"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA PEMILIK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="273" y="34" width="100" height="20" uuid="b8159945-6dc2-46aa-87b9-e10e0d641068"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALAMAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="34" width="100" height="20" uuid="79fbea7c-68f5-4e8f-a822-e0b0bfffa6ea"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO TELEPON]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<rectangle>
+				<reportElement x="73" y="0" width="100" height="20" uuid="47fbfadd-3c77-4553-8ea7-22ac4002cfa3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="173" y="0" width="100" height="20" uuid="1ffcbd3a-4f2c-42c1-a7de-8859891ad52e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="273" y="0" width="100" height="20" uuid="58f63f3a-9dd1-45f2-ad3d-7b4e9588ecb8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="373" y="0" width="100" height="20" uuid="71247ad4-9ac1-408d-85b2-3e4d5c50f868"/>
+			</rectangle>
+			<textField>
+				<reportElement x="98" y="1" width="100" height="20" uuid="1f5aee31-0837-44c0-99a3-2b586b194ad1"/>
+				<textFieldExpression><![CDATA[$F{id_pemilik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="0" width="100" height="20" uuid="76eb9c1d-3c8a-48a9-b482-8c5cf43c0953"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nama_pemilik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="0" width="100" height="20" uuid="7ce4182e-abad-422f-9408-ce0739df3527"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="373" y="1" width="100" height="20" uuid="804f4020-d684-4beb-9032-8919dc2c45d4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{no_telepon}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
